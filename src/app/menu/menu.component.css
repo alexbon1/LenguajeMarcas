@@ -1,0 +1,25 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(rgb(85, 85, 85), white);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .menu-item {
+    margin-right: 10px;
+  }
+  
+  .menu-item:last-child {
+    margin-right: 0;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-item.active a {
+    font-weight: bold;
+  }
+  

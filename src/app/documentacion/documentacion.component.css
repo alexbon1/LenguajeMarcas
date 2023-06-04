@@ -1,0 +1,28 @@
+.content{
+    background-image: linear-gradient(white,rgb(85, 85, 85));
+}
+h1 {
+    color: #e50914;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }

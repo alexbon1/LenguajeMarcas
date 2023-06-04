@@ -1,0 +1,19 @@
+<div class="menu">
+  <button (click)="cambiarVista('calendario')">Calendario</button>
+  <button (click)="cambiarVista('agenda')">Agenda</button>
+  <button (click)="cambiarVista('documentacion')">Documentacion</button>
+</div>
+
+<div *ngIf="vista === 'calendario'">
+  <!-- Coloca aquí el contenido del componente Calendario -->
+  <app-calendario></app-calendario>
+</div>
+
+<div *ngIf="vista === 'agenda'">
+  <!-- Coloca aquí el contenido del componente Agenda -->
+  <app-agenda></app-agenda>
+</div>
+  <div *ngIf="vista === 'documentacion'">
+    <!-- Coloca aquí el contenido del componente Agenda -->
+    <app-documentacion></app-documentacion>
+

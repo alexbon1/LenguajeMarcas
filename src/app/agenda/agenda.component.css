@@ -1,0 +1,82 @@
+.agenda-container {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgb(85, 85, 85), white,rgb(85, 85, 85));
+  }
+  h1 {
+    width: 100%;
+    background-color: #ca0710;
+   justify-content:center ;
+   text-align: center;
+  }
+  
+  .columna {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .columna .column {
+    background-image:linear-gradient(rgb(85, 85, 85), white);
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .columna .column h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .columna .column ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .columna .column li {
+    margin-bottom: 10px;
+  }
+  
+  .columna .column li h3 {
+    font-weight: bold;
+  }
+  
+  .columna .column .evento-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .columna .column .evento-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .columna .column .evento-actions button {
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  .columna .column .finalizado {
+    background-color: #ca0710;
+    border-radius: 4px;
+  }
+  
+  .columna .column .finalizado:hover {
+    background-color: #e50914;
+  }  
+
+ 
+  
+  .columna .column .finalizado {
+    background-color: #ca0710;
+  }
+  
+  .columna .column .finalizado:hover {
+    background-color: #e50914;
+  }
+  

@@ -1,0 +1,36 @@
+<h1>Calendario</h1>
+<div class="calendario">
+  <div class="pestanas">
+    <div class="pestana" [class.activa]="pestanaActual === 'borrar'" (click)="cambiarPestana('borrar')">Borrar</div>
+  </div>
+  
+  <div class="calendario-header">
+    <button (click)="mesAnterior()">&lt;</button>
+    <h1>{{ nombreMes }}</h1>
+    <button (click)="mesSiguiente()">&gt;</button>
+  </div>
+  <table class="calendario-table">
+    <thead>
+      <tr>
+        <th *ngFor="let dia of diasSemana">{{ dia }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let semana of semanas">
+        <td *ngFor="let dia of semana">
+          <div class="dia {{ dia.estado }}" (click)="agregarEvento(dia)">{{ dia.numero }}</div>
+          <div *ngIf="pestanaActual === 'agregar' && dia.eventos" class="eventos agregar">
+            <div *ngFor="let evento of dia.eventos" class="evento agregar">{{ evento.titulo }}</div>
+          </div>
+          <div *ngIf="pestanaActual === 'mostrar' && dia.eventos" class="eventos mostrar">
+            <div *ngFor="let evento of dia.eventos" class="evento mostrar" (click)="verEvento(evento)">{{ evento.titulo }}</div>
+          </div>
+          <div *ngIf="pestanaActual === 'borrar' && dia.eventos" class="eventos borrar">
+              <div *ngFor="let evento of dia.eventos" class="evento borrar" (click)="borrarEvento(dia, evento)">{{ evento.titulo }}</div>
+            </div>
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

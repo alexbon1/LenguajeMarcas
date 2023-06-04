@@ -1,0 +1,60 @@
+<h1>Agenda</h1>
+<div class="agenda-container">
+
+  <div class="columna">
+    <div class="column not-finished">
+      <h2>Eventos no finalizados</h2>
+      <ul>
+        <ng-container *ngFor="let evento of eventosNoFinalizados; let i = index">
+          <li *ngIf="i === 0 || evento.fecha !== eventosNoFinalizados[i - 1].fecha">
+            <h3>{{ evento.fecha | date:'longDate' }}</h3>
+          </li>
+          <li class="evento-item">
+            <div class="evento-details">
+              <strong>{{ evento.titulo }}</strong>
+              <p>{{ evento.descripcion }}</p>
+              <p>Hora de inicio: {{ evento.horaInicio }}</p>
+              <p>Hora de fin: {{ evento.horaFin }}</p>
+            </div>
+            <div class="evento-actions">
+              <button class="btn-editar" (click)="editarEvento(evento)">
+                Editar
+              </button>
+              <button (click)="cambiarEstadoEvento(evento)" [class.finalizado]="evento.finalizado">
+                {{ evento.finalizado ? 'Marcar como no finalizado' : 'Marcar como finalizado' }}
+              </button>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+  <div class="columna">
+    <div class="column finished">
+      <h2>Eventos finalizados</h2>
+      <ul>
+        <ng-container *ngFor="let evento of eventosFinalizados; let i = index">
+          <li *ngIf="i === 0 || evento.fecha !== eventosFinalizados[i - 1].fecha">
+            <h3>{{ evento.fecha | date:'longDate' }}</h3>
+          </li>
+          <li class="evento-item">
+            <div class="evento-details">
+              <strong>{{ evento.titulo }}</strong>
+              <p>{{ evento.descripcion }}</p>
+              <p>Hora de inicio: {{ evento.horaInicio }}</p>
+              <p>Hora de fin: {{ evento.horaFin }}</p>
+            </div>
+            <div class="evento-actions">
+              <button class="btn-editar" (click)="editarEvento(evento)">
+                Editar
+              </button>
+              <button (click)="cambiarEstadoEvento(evento)" [class.finalizado]="evento.finalizado">
+                {{ evento.finalizado ? 'Marcar como no finalizado' : 'Marcar como finalizado' }}
+              </button>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>

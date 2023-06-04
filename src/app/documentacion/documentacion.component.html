@@ -1,0 +1,61 @@
+<div class ="content">
+<h1>Documentación del proyecto</h1>
+
+<h2>Estructura de componentes y plantillas</h2>
+<p>El proyecto se organiza en varios componentes principales:</p>
+<ul>
+  <li><code>AppComponent</code>: Componente principal de la aplicación, que contiene el enrutamiento y el componente <code>MenuComponent</code>.</li>
+  <li><code>MenuComponent</code>: Componente que muestra el menú de navegación y controla la vista actual.</li>
+  <li><code>CalendarioComponent</code>: Componente que muestra el calendario y maneja las operaciones relacionadas con eventos.</li>
+  <li><code>AgendaComponent</code>: Componente que muestra la agenda y maneja las operaciones relacionadas con eventos.</li>
+  <li><code>DocumentacionComponent</code>: Componente que muestra la documentación de la aplicación.</li>
+</ul>
+
+<p>El archivo <code>app.component.html</code> contiene el enrutador y el componente <code>MenuComponent</code>. A través del enrutador, se cargará el componente correspondiente según la vista seleccionada en el menú.</p>
+
+<p>La estructura de las plantillas de cada componente se describe detalladamente en los archivos <code>.html</code> correspondientes.</p>
+
+<h2>Estructura del código e invocación de funciones</h2>
+<p>En el archivo <code>menu.component.ts</code>, el componente <code>MenuComponent</code> tiene una propiedad <code>vista</code> que controla la vista actual. Se utiliza en la plantilla (<code>menu.component.html</code>) para mostrar el contenido correspondiente según la vista seleccionada.</p>
+
+<p>El componente <code>MenuComponent</code> también define métodos para cambiar la vista, como <code>cambiarVista(vista: string)</code>, que actualiza la propiedad <code>vista</code> con el valor seleccionado.</p>
+
+<p>El componente <code>CalendarioComponent</code> y <code>AgendaComponent</code> también tienen métodos para realizar operaciones relacionadas con eventos, como agregar eventos, ver detalles de eventos, marcar eventos como finalizados, etc. Estos métodos se invocan desde las plantillas correspondientes.</p>
+
+<h2>Estructuras de datos utilizadas</h2>
+<p>El proyecto utiliza las siguientes estructuras de datos:</p>
+<ul>
+  <li><code>Evento</code>: una interfaz o clase que representa un evento, con propiedades como título, descripción, fecha, hora de inicio, hora de fin, etc.</li>
+  <li><code>Dia</code>: una interfaz o clase que representa un día en el calendario o la agenda, con propiedades como número de día, estado (hoy, otro mes, evento, seleccionado, etc.), y una lista de eventos para ese día.</li>
+</ul>
+<h2>Funciones del componente Calendario</h2>
+<ul>
+  <li><code>cambiarPestana()</code>: Esta función se utiliza para cambiar la pestaña activa en el Calendario. Recibe como parámetro la pestaña seleccionada y actualiza la propiedad <code>pestanaActual</code> con el valor correspondiente.</li>
+  <li><code>agregarEvento()</code>: Esta función se ejecuta cuando se hace clic en un día del Calendario para agregar un evento. Solicita al usuario información como título, descripción, hora de inicio, hora de fin y estado de finalización del evento. Luego, crea un objeto de evento con la información ingresada y lo agrega a la lista de eventos del día y a la lista global de eventos.</li>
+  <li><code>verEvento(evento)</code>: Esta función se activa al hacer clic en un evento del Calendario. Muestra los detalles del evento, como título, descripción, hora de inicio, hora de fin y estado de finalización. También ofrece la opción de cambiar el estado de finalización del evento.</li>
+  <li><code>borrarEvento()</code>: Esta función se utiliza para borrar un evento del Calendario. Recibe como parámetros el día y el evento específico a borrar. Elimina el evento de la lista de eventos del día y de la lista global de eventos.</li>
+  <li><code>mesAnterior()</code>: Esta función se ejecuta al hacer clic en el botón para ir al mes anterior. Disminuye el mes actual en 1 y genera el nuevo calendario.</li>
+  <li><code>mesSiguiente()</code>: Esta función se activa al hacer clic en el botón para ir al mes siguiente. Aumenta el mes actual en 1 y genera el nuevo calendario.</li>
+  <li><code>resetearCalendario()</code>: Esta función se utiliza para restablecer el Calendario. Limpia la lista de semanas y genera un nuevo calendario.</li>
+</ul>
+<h2>Funciones del componente Agenda</h2>
+<ul>
+  <li><code>cambiarEstadoEvento(evento: any)</code>: Esta función se ejecuta cuando se hace clic en el botón para cambiar el estado de finalización de un evento en la Agenda. Recibe como parámetro el evento específico y cambia su estado de finalización (de finalizado a no finalizado o viceversa).</li>
+  <li><code>editarEvento(evento: any)</code>: Esta función se activa al hacer clic en el botón de editar evento en la Agenda. Permite al usuario editar el título, descripción, hora de inicio, hora de fin y estado de finalización del evento. Guarda los cambios realizados en el almacenamiento local y actualiza la lista de eventos.</li>
+</ul>
+<h2>Problemas encontrados y soluciones</h2>
+<p>A lo largo del desarrollo del proyecto, es posible que se hayan encontrado algunos problemas y desafíos. A continuación se describen algunos de ellos junto con las soluciones correspondientes:</p>
+<ul>
+  <li><strong>Problema:</strong> Error al cargar la vista de documentación en el componente <code>MenuComponent</code> debido a un error de tipo.</li>
+  <li><strong>Solución:</strong> El error se resolvió asegurándose de que el tipo de datos utilizado en la propiedad <code>vista</code> coincidiera con las opciones del menú.</li>
+</ul>
+
+<h2>Posibles mejoras</h2>
+<p>A continuación se presentan algunas posibles mejoras para el proyecto:</p>
+<ul>
+  <li>Implementar autenticación y gestión de usuarios para permitir que cada usuario tenga su propio calendario y agenda personalizados.</li>
+  <li>Mejorar la usabilidad y la interfaz de usuario agregando funcionalidades como arrastrar y soltar eventos, notificaciones, etc.</li>
+  <li>Agregar funcionalidades adicionales, como recordatorios, compartir eventos con otros usuarios, búsqueda y filtrado avanzados, etc.</li>
+
+</ul>
+</div>

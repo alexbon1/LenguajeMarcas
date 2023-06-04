@@ -1,0 +1,102 @@
+.calendario {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgb(85, 85, 85), white);
+    border: 2px solid #e50914; /* Rojo */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    background-image: linear-gradient(white,rgb(85, 85, 85));
+    color: #fff; /* Texto blanco */
+    padding: 10px;
+  }
+  
+  .calendario .pestanas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendario .pestanas .pestana {
+    background-color: #e50914; /* Rojo */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .calendario .pestanas .pestana.activa {
+    background-color: #ca0710; 
+  }
+  
+  .calendario .calendario-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendario .calendario-header h1 {
+    font-weight: bold;
+    margin: 0;
+    color: black; /* Negro */
+  }
+  
+  .calendario .calendario-header button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: black; /* Negro */
+  }
+  
+  .calendario .calendario-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .calendario .calendario-table th,
+  .calendario .calendario-table td {
+    text-align: center;
+    border: 4px solid #e50914; /* Rojo */
+    padding: 10px;
+  }
+  
+  
+  .calendario .dia.hoy {
+    background-color: #e50914; /* Rojo */
+    color: #fff; /* Texto blanco */
+  }
+  
+  .calendario .dia.otro-mes {
+    color: #e50914; /* Rojo */
+  }
+  
+  .calendario .dia.evento {
+    background-color: #ffddcc; /* Color personalizado */
+  }
+  
+  .calendario .dia.selected {
+    background-color: #ffccff; /* Color personalizado */
+  }
+  
+  .calendario .evento.mostrar.seleccionado {
+    background-color: black; /* Negro */
+    color: #e50914; /* Rojo */
+  }
+  
+  .calendario .eventos.borrar .evento.borrar {
+    background-color: #e50914; /* Rojo */
+    color: white;
+  }
+  
+  .calendario .pestanas .pestana.activa {
+    color: #ca0710;
+    background-color: black; /* Rojo más oscuro */
+  }
+  
